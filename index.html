@@ -1,83 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Media Queries</title>
     <style>
-        *{
-            margin: 0;
-            padding: 0;
-            background-color: black;
-        }
-        body{
-            width: 100vw;
-        }
-        div{
-            width: 100%;
-        }
-        header{
-         width: 60%;
-        height: 85vh;
-        margin: 45px auto;
+        * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-        }
-        @media screen and  (min-width:320px) and (max-width:1020px)  {
-            body{
-                width: 100vw;
-               
-            }
-            div{
-               
-            width: 100%;
-        }
+main {
+  height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
 
-            header{
-                margin-top: 0px;
-                width:100%;
-                height:55vh;
-               
-                
+.white-portion {
+  width: 100%;
+  height: 200px;
+  background-color: white;
+}
 
-            }
-            img{
-                background-repeat: no-repeat;
-                background-size: cover;
-                background-position: center;
-                width: 100%;
-               
-            }
-           
-          
-        }
-        /* @media screen and (max-width:1024px){
-            header{
-                margin-top: 43%;
-                width:96%;
-             height:55vh;
+.yellow-portion {
+  width: 100%;
+  height: 80%;
+  background-color: #F0C50B;
+}
 
-            }
-            img{
-                background-repeat: no-repeat;
-                background-size: cover;
-                background-position: center;
-                width: 100%;
-                
-            }
-           
-          
-        } */
-     
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  width: 80%;
+  height: 100%;
+  transform: translateX(-50%);
+}
 
+.img-container img {
+  width: 400px;
+  height: 500px;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  width: 500px;
+}
+
+.details h1 {
+  text-align: center;
+  font-size: 50px;
+}
+
+.details p {
+  text-align: center;
+  width: 400px;
+  margin: auto;
+  font-weight: bold;
+}
+
+.details p a {
+  text-decoration: none;
+  color: black;
+  text-decoration: underline;
+}
+
+.details button {
+  width: 250px;
+  background-color: black;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: none;
+  margin: auto;
+  padding: 15px 20px;
+}
+
+@media screen and (max-width:863px) {
+  * {
+    overflow-x: hidden;
+    overflow-y: hidden;
+  }
+  .container {
+    flex-direction: column;
+  }
+
+  .img-container img {
+    width: 200px;
+    height: 300px;
+  }
+
+  .details h1 {
+    font-size: 30px;
+  }
+
+  .details p {
+    font-size: 15px;
+  }
+
+  .yellow-portion {
+    width: 100%;
+    height: 100%;
+  }
+}
     </style>
-</head>
-<body>
-    <div>
-    <header>
-        <img src="https://images01.nicepagecdn.com/page/11/02/css-template-preview-110226.webp" alt="">
-
-    </header>
-</div>
-    
-</body>
+  </head>
+  <body>
+    <main>
+      <div class="white-portion"></div>
+      <div class="yellow-portion"></div>
+      <div class="container">
+        <div class="img-container">
+          <img src="https://images.news18.com/ibnlive/uploads/2021/12/coffee-mug-16387975963x2.jpg" alt="" />
+        </div>
+        <div class="details">
+          <h1>Certified Coffee Courses</h1>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti
+            ipsa itaque animi. Eligendi assumenda voluptatum autem inventore
+            odio rerum? Doloribus sapiente deleniti, Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, culpa.
+          </p>
+          <p>Image from <a href="#">Freepik</a></p>
+          <button>learn more</button>
+        </div>
+      </div>
+    </main>
+  </body>
 </html>
